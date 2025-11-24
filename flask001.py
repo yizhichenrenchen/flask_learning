@@ -1,6 +1,6 @@
 from flask import Flask,request,jsonify
 
-
+#本篇无任何校验
 
 app = Flask(__name__)
 @app.route("/index",methods=["GET","POST"])#路由后面加上methods可以添加请求类型
