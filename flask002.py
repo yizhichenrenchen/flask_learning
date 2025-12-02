@@ -9,6 +9,8 @@
 
 """
 from flask import Flask,jsonify,request#导入需要的模块
+import pymysql
+
 import hashlib#导入需要的模块
 def get_user_dict():#构建函数用来解析文档token
     info_dict = {}#创建字典用来储存解析的token和对应的名字
