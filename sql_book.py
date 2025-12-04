@@ -23,5 +23,32 @@ create table employees(id int,name varchar(10),salary(8,2))
 5.删除表格
 同删除数据库一样使用drop关键字
 drop table employees;
+6.修改表名
+alter table 旧表名 rename 新表名;
+7.修改列名
+alter table 表名 change column 旧列名 新列名 类型;
+8.修改列类型
+alter table 表名 modify 要修改的列名 修改后的类型；
+9.添加列
+alter table 表名 add column 列名 类型;
+10.删除列
+alter table drop column 列名;
+-----------------------------约束-----------------------------------
+一.主键约束
+不允许重复，不允许空值
+1.添加主键约束
+alter table 表名 add primary key（列名）
+2.为主键设置自增
+alter table 表名 modify 列名 类型 auto_increment;
+
+2.外键约束
+允许重复，允许空值，但是值需要为另外一列的值
+3.唯一性约束
+不允许重复值，可以为多个列添加唯一性约束
+4.非空约束
+不允许有空值，可以为多个列添加非空约束
+5.检查约束
+自定义约束，目前mysql不支持自定义约束
+
 
 """
